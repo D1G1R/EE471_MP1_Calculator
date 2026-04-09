@@ -1,0 +1,87 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+  background-color: #0070c0;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 74px repeat(4, 86px);
+  grid-template-rows: 70px repeat(4, 86px);
+  gap: 8px;
+  border: 5px solid #0070c0;
+  box-sizing: border-box;
+}
+
+#display {
+  grid-column: 2 / span 4;
+  grid-row: 1;
+  background-color: white;
+  color: #111;
+  font-size: 48px;
+  text-align: right;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #808080;
+  color: white;
+  border: none;
+  font-size: 42px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 86px;
+  height: 86px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+button:active {
+  opacity: 0.75;
+}
+
+button.operator {
+  background-color: #a6a6a6;
+}
+
+button.equals {
+  background-color: #004b8d;
+}
+
+button.mic {
+  background-color: #a6a6a6;
+  border-radius: 50%;
+  width: 74px;
+  height: 74px;
+  grid-column: 1;
+  grid-row: 2 / span 4;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  place-items: center;
+  color: #111; /* used by SVG fill=currentColor */
+}
+
+button.mic.listening {
+  outline: 12px solid rgba(255, 255, 255, 0.55);
+}
+
+svg.bi.bi-mic {
+  width: 44px;
+  height: 44px;
+}

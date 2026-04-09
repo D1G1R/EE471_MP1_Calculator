@@ -1,1 +1,0 @@
-Mini Project 1: KANBER UĞURCAN TOMRUK

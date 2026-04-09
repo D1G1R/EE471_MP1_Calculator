@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice Calculator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  <div class="calculator">
+    <div id="display">0</div>
+
+    <button id="micBtn" class="mic" title="Speak command">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+        <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5"/>
+        <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3"/>
+      </svg>
+    </button>
+
+    <button data-key="7" style="grid-column:2;grid-row:2">7</button>
+    <button data-key="8" style="grid-column:3;grid-row:2">8</button>
+    <button data-key="9" style="grid-column:4;grid-row:2">9</button>
+    <button class="operator" data-key="/" style="grid-column:5;grid-row:2"><span class="symbol">÷</span></button>
+
+    <button data-key="4" style="grid-column:2;grid-row:3">4</button>
+    <button data-key="5" style="grid-column:3;grid-row:3">5</button>
+    <button data-key="6" style="grid-column:4;grid-row:3">6</button>
+    <button class="operator" data-key="*" style="grid-column:5;grid-row:3"><span class="symbol">×</span></button>
+
+    <button data-key="1" style="grid-column:2;grid-row:4">1</button>
+    <button data-key="2" style="grid-column:3;grid-row:4">2</button>
+    <button data-key="3" style="grid-column:4;grid-row:4">3</button>
+    <button class="operator" data-key="-" style="grid-column:5;grid-row:4"><span class="symbol">−</span></button>
+
+    <button data-key="0" style="grid-column:2;grid-row:5">0</button>
+    <button data-key="." style="grid-column:3;grid-row:5">.</button>
+    <button class="equals" data-key="=" style="grid-column:4;grid-row:5"><span class="symbol">=</span></button>
+    <button class="operator" data-key="+" style="grid-column:5;grid-row:5"><span class="symbol">+</span></button>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
